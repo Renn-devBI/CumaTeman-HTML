@@ -10,8 +10,8 @@ const profiles = {
     online: true
   },
   right: {
-    name: "renn",
-    avatar: "https://i.ibb.co.com/Sw2q8w5c/Screenshot-2025-11-11-194636.png1",
+    name: "Me",
+    avatar: "https://i.ibb.co.com/yFmYHr36/f15b7fb63f2340c3fb38d5e59fa25f75.jpg",
     online: true
   }
 };
