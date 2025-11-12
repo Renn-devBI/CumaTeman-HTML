@@ -23,11 +23,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .chat-container {
   width: 400px;
-  height: 85vh;
+  height: calc(100vh - 120px);
   background: #000000;
   border-radius: 16px;
   overflow-y: auto;
@@ -147,9 +148,11 @@ body {
 .controls {
   width: 400px;
   margin: 12px auto;
+  padding: 12px 0;
   display: flex;
   justify-content: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .play-btn {
@@ -175,4 +178,44 @@ body {
 
 .message.enter-pulse {
   animation: messageAppear 0.3s ease forwards;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .chat-container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    border-radius: 0;
+    border: none;
+    padding: 12px;
+    gap: 6px;
+  }
+
+  .controls {
+    width: 100%;
+    margin: 0;
+    padding: 8px 12px;
+  }
+
+  .message {
+    max-width: 85%;
+    padding: 10px 14px;
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .avatar {
+    width: 24px;
+    height: 24px;
+  }
+
+  .play-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
 }
